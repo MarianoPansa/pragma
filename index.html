@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ─── PRIMARY META ─── -->
+<title>Pragma — Inteligencia Artificial para equipos legales</title>
+<meta name="description" content="Capacitaciones, diagnóstico e implementación de soluciones de IA para estudios jurídicos, equipos legales in-house y empresas. Resultados concretos en semanas, no en meses.">
+<meta name="keywords" content="IA legal, inteligencia artificial abogados, legaltech, automatización legal, capacitación IA estudios jurídicos, Pragma">
+<meta name="author" content="Pragma">
+<link rel="canonical" href="https://www.bepragma.com.ar/">
+
+<!-- ─── FAVICON ─── -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<meta name="theme-color" content="#0a0c14">
+
+<!-- ─── OPEN GRAPH ─── -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Pragma">
+<meta property="og:title" content="Pragma — Inteligencia Artificial para equipos legales">
+<meta property="og:description" content="¿Tu equipo legal todavía no usa IA? Te mostramos exactamente cómo hacerlo, con casos reales y resultados concretos en semanas, no en meses.">
+<meta property="og:url" content="https://www.bepragma.com.ar/">
+<meta property="og:image" content="https://www.bepragma.com.ar/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Pragma — Inteligencia Artificial para equipos legales">
+
+<!-- ─── TWITTER / X ─── -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pragma — Inteligencia Artificial para equipos legales">
+<meta name="twitter:description" content="¿Tu equipo legal todavía no usa IA? Casos reales, resultados concretos, sin perder tiempo.">
+<meta name="twitter:image" content="https://www.bepragma.com.ar/og-image.png">
+<meta name="twitter:image:alt" content="Pragma — Inteligencia Artificial para equipos legales">
+
+<!-- ─── ROBOTS ─── -->
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<!-- ─── FONTS ─── -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: oklch(96%  0.012 80);
+  --white: #ffffff;
+  --dark:  oklch(12%  0.05  258);
+  --navy:  oklch(19%  0.09  258);
+  --elec:  oklch(59%  0.23  252);
+  --sand:  oklch(83%  0.05  78);
+  --muted: oklch(52%  0.025 258);
+  --rule:  oklch(84%  0.018 258);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--dark);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  padding: 0 48px; height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: background .3s, border-color .3s;
+  border-bottom: 1px solid transparent;
+}
+nav.bg { background: var(--cream); border-bottom-color: var(--rule); }
+.logo {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 22px; letter-spacing: -.02em; color: var(--dark);
+  text-decoration: none; display: inline-flex; align-items: baseline;
+}
+.logo .logo-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--elec); display: inline-block; margin-left: 2px;
+}
+.nav-right { display: flex; align-items: center; gap: 32px; }
+.nav-right a { font-size: 13.5px; color: var(--muted); text-decoration: none; transition: color .15s; }
+.nav-right a:hover { color: var(--dark); }
+.nav-btn {
+  font-size: 13px; font-weight: 600; padding: 8px 20px;
+  border-radius: 8px; background: var(--dark); color: #fff;
+  border: none; cursor: pointer; transition: opacity .15s;
+}
+.nav-btn:hover { opacity: .8; }
+
+/* ── HERO ── */
+#hero {
+  min-height: 100svh;
+  padding: 120px 48px 0;
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--rule);
+  position: relative; overflow: hidden;
+}
+.hero-top {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 24px;
+}
+.hero-tag {
+  font-size: 11px; font-weight: 700; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--elec);
+  padding-top: 6px;
+}
+.hero-aside {
+  text-align: right; max-width: 260px;
+}
+.hero-aside-label {
+  font-size: 11px; font-weight: 600; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 14px;
+}
+.hero-aside-items { display: flex; flex-direction: column; gap: 8px; }
+.aside-stat {
+  display: flex; align-items: baseline; justify-content: flex-end; gap: 8px;
+}
+.aside-stat-val {
+  font-family: 'Bricolage Grotesque', sans-serif; font-size: 28px;
+  font-weight: 800; color: var(--dark); letter-spacing: -.03em;
+}
+.aside-stat-val em { font-style: normal; color: var(--elec); }
+.aside-stat-label { font-size: 12px; color: var(--muted); }
+
+.hero-headline {
+  padding: 40px 0 0;
+  position: relative;
+}
+.hero-h1 {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: clamp(52px, 8.5vw, 116px);
+  letter-spacing: -.04em; line-height: .96;
+  color: var(--dark);
+}
+.hero-h1 .hl {
+  display: inline-block;
+  background: var(--dark); color: var(--cream);
+  padding: 0 .18em; border-radius: 6px;
+  font-style: normal;
+}
+.hero-h1 .hl-elec {
+  display: inline-block;
+  background: var(--elec); color: #fff;
+  padding: 0 .18em; border-radius: 6px;
+  font-style: normal;
+}
+
+.hero-bottom {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  border-top: 1px solid var(--rule); margin-top: 56px;
+}
+.hero-bottom-cell {
+  padding: 28px 0 28px;
+  border-right: 1px solid var(--rule);
+}
+.hero-bottom-cell:last-child { border-right: none; }
+.hero-bottom-cell:first-child { padding-right: 32px; }
+.hero-bottom-cell:not(:first-child) { padding-left: 32px; }
+.hbc-label {
+  font-size: 11px; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 8px;
+}
+.hbc-text { font-size: 15px; font-weight: 400; color: var(--dark); line-height: 1.55; }
+.hbc-cta {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 16px;
+  font-size: 14px; font-weight: 600; color: var(--dark);
+  background: none; border: none; cursor: pointer; padding: 0;
+}
+.hbc-cta:hover { color: var(--elec); }
+.cta-arrow {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--dark); display: flex; align-items: center; justify-content: center;
+  transition: background .15s, transform .15s;
+}
+.hbc-cta:hover .cta-arrow { background: var(--elec); transform: translateX(4px); }
+.cta-arrow svg { width: 14px; height: 14px; }
+
+/* ── SERVICES ── */
+#servicios { border-bottom: 1px solid var(--rule); }
+.services-header {
+  padding: 64px 48px 48px;
+  display: flex; align-items: baseline; justify-content: space-between;
+  border-bottom: 1px solid var(--rule);
+}
+.sh-label {
+  font-size: 11px; font-weight: 700; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--elec);
+}
+.sh-title {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: clamp(26px, 3vw, 40px); letter-spacing: -.03em;
+  color: var(--dark); line-height: 1.1;
+}
+.sh-note { font-size: 14px; font-weight: 300; color: var(--muted); max-width: 280px; text-align: right; }
+.service-row {
+  display: grid; grid-template-columns: 140px 1fr 1fr auto;
+  align-items: center; gap: 48px;
+  padding: 40px 48px;
+  border-bottom: 1px solid var(--rule);
+  transition: background .2s;
+  cursor: default;
+  position: relative; overflow: hidden;
+}
+.service-row::after {
+  content: ''; position: absolute; inset: 0;
+  background: var(--dark); transform: scaleX(0); transform-origin: left;
+  transition: transform .35s cubic-bezier(.76,0,.24,1);
+  z-index: 0;
+}
+.service-row:hover::after { transform: scaleX(1); }
+.service-row > * { position: relative; z-index: 1; transition: color .25s; }
+.service-row:hover .svc-num,
+.service-row:hover .svc-title,
+.service-row:hover .svc-desc,
+.service-row:hover .svc-link { color: #fff; }
+.service-row:hover .svc-desc { color: rgba(255,255,255,.55); }
+.service-row:hover .svc-link-arrow { background: rgba(255,255,255,.15); }
+
+.svc-num {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 72px; letter-spacing: -.05em; line-height: 1;
+  color: oklch(88% 0.018 258); transition: color .25s;
+}
+.svc-title {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700;
+  font-size: 22px; letter-spacing: -.02em; color: var(--dark); line-height: 1.2;
+}
+.svc-desc {
+  font-size: 14.5px; font-weight: 400; color: var(--muted); line-height: 1.65;
+}
+.svc-link {
+  font-size: 13.5px; font-weight: 600; color: var(--dark);
+  display: flex; align-items: center; gap: 10px; white-space: nowrap;
+}
+.svc-link-arrow {
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 1.5px solid var(--rule);
+  display: flex; align-items: center; justify-content: center;
+  transition: background .2s, border-color .2s;
+}
+.svc-link-arrow svg { width: 14px; height: 14px; }
+
+/* ── IMPACT NUMBERS ── */
+#impacto {
+  background: var(--dark);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.impact-inner {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+}
+.impact-cell {
+  padding: 72px 48px;
+  border-right: 1px solid rgba(255,255,255,.08);
+  display: flex; flex-direction: column; gap: 12px;
+}
+.impact-cell:last-child { border-right: none; }
+.impact-val {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: clamp(80px, 11vw, 148px);
+  letter-spacing: -.06em; line-height: .88;
+  color: #fff;
+}
+.impact-val span { color: var(--elec); }
+.impact-label {
+  font-size: 14px; font-weight: 400; color: rgba(255,255,255,.4);
+  line-height: 1.5; max-width: 200px;
+}
+.impact-source {
+  font-size: 11px; font-weight: 600; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--elec); margin-top: 4px;
+}
+
+/* ── WHY PRAGMA ── */
+#por-que {}
+.why-header {
+  padding: 64px 48px 48px;
+  display: flex; align-items: baseline; justify-content: space-between;
+  border-bottom: 1px solid var(--rule);
+}
+.why-row {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--rule);
+}
+.why-row-left {
+  padding: 56px 48px;
+  border-right: 1px solid var(--rule);
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.why-row-right {
+  padding: 56px 48px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+/* tier 1 — lightest */
+.why-row.tier-1 { background: var(--cream); }
+
+/* tier 2 — mid */
+.why-row.tier-2 { background: oklch(38% 0.085 258); }
+.why-row.tier-2 .why-num { color: rgba(255,255,255,.14); }
+.why-row.tier-2 .why-title { color: #fff; }
+.why-row.tier-2 .why-desc { color: rgba(255,255,255,.55); }
+.why-row.tier-2 .why-row-left,
+.why-row.tier-2 .why-row-right { border-color: rgba(255,255,255,.10); }
+
+/* tier 3 — darkest */
+.why-row.tier-3 { background: var(--dark); border-bottom: none; }
+.why-row.tier-3 .why-num { color: rgba(255,255,255,.10); }
+.why-row.tier-3 .why-title { color: #fff; }
+.why-row.tier-3 .why-desc { color: rgba(255,255,255,.45); }
+.why-row.tier-3 .why-row-left,
+.why-row.tier-3 .why-row-right { border-color: rgba(255,255,255,.08); }
+
+.why-num {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 96px; letter-spacing: -.06em; line-height: 1;
+  color: oklch(90% 0.016 258); margin-bottom: 24px;
+}
+.why-title {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700;
+  font-size: clamp(20px, 2.2vw, 30px); letter-spacing: -.02em;
+  color: var(--dark); line-height: 1.2;
+}
+.why-desc {
+  font-size: 15px; font-weight: 400; color: var(--muted);
+  line-height: 1.7; max-width: 420px;
+}
+
+/* ── CASES ── */
+#casos { border-bottom: 1px solid var(--rule); }
+.cases-header {
+  padding: 64px 48px 48px;
+  display: flex; align-items: baseline; justify-content: space-between;
+  border-bottom: 1px solid var(--rule);
+}
+.cases-layout {
+  display: grid; grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+.case-item {
+  padding: 48px;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  display: flex; flex-direction: column; gap: 16px;
+  transition: background .2s;
+}
+.case-item:hover { background: var(--white); }
+.case-item:nth-child(2n) { border-right: none; }
+.case-item:last-child:nth-child(odd) {
+  grid-column: 1 / -1; border-right: none;
+  display: grid; grid-template-columns: 1fr 2fr; gap: 48px; align-items: center;
+}
+.case-big-num {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: clamp(60px, 8vw, 96px); letter-spacing: -.05em; line-height: 1;
+  color: var(--elec);
+}
+.case-tag {
+  font-size: 10.5px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--elec);
+}
+.case-title {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700;
+  font-size: 20px; letter-spacing: -.02em; color: var(--dark); line-height: 1.25;
+}
+.case-desc {
+  font-size: 14px; font-weight: 400; color: var(--muted); line-height: 1.65; flex: 1;
+}
+.case-result {
+  font-size: 13px; font-weight: 600; color: var(--dark);
+  display: flex; align-items: center; gap: 8px;
+}
+.case-result::before {
+  content: ''; width: 16px; height: 2px; background: var(--elec);
+  border-radius: 2px; flex-shrink: 0;
+}
+
+/* ── CTA ── */
+#cta {
+  background: var(--dark);
+  padding: 96px 48px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 48px; flex-wrap: wrap;
+}
+.cta-left { flex: 1; }
+.cta-eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--elec); margin-bottom: 24px;
+}
+.cta-h2 {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: clamp(32px, 4vw, 56px); letter-spacing: -.03em;
+  color: #fff; line-height: 1.05; max-width: 580px;
+}
+.cta-right { display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
+.btn-cta {
+  font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 600;
+  padding: 16px 36px; border-radius: 12px;
+  background: var(--elec); color: #fff; border: none; cursor: pointer;
+  transition: opacity .15s, transform .15s;
+  white-space: nowrap;
+}
+.btn-cta:hover { opacity: .9; transform: translateY(-2px); }
+.cta-wa {
+  font-size: 13px; font-weight: 400; color: rgba(255,255,255,.4);
+  text-decoration: none; display: flex; align-items: center; gap: 8px;
+  transition: color .15s;
+}
+.cta-wa:hover { color: rgba(255,255,255,.7); }
+
+/* ── FOOTER ── */
+footer {
+  padding: 32px 48px;
+  display: flex; align-items: center; justify-content: space-between;
+  border-top: 1px solid var(--rule); flex-wrap: wrap; gap: 16px;
+}
+.footer-logo {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 17px; color: var(--dark);
+  display: inline-flex; align-items: baseline;
+}
+.footer-logo .logo-dot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--elec); display: inline-block; margin-left: 2px;
+}
+
+/* ── QUOTE ── */
+#quote {
+  padding: 104px 48px;
+  border-bottom: 1px solid var(--rule);
+  text-align: center;
+}
+.quote-inner { max-width: 920px; margin: 0 auto; }
+.quote-eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--elec); margin-bottom: 32px;
+}
+.quote-text {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: clamp(32px, 5vw, 60px); letter-spacing: -.03em;
+  line-height: 1.06; color: var(--dark);
+}
+.quote-text em { font-style: normal; color: var(--elec); }
+.quote-author {
+  margin-top: 32px; font-size: 15px; font-weight: 500;
+  color: var(--muted); letter-spacing: .04em;
+}
+.footer-links { display: flex; gap: 28px; }
+.footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color .15s; }
+.footer-links a:hover { color: var(--dark); }
+.footer-copy { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <a href="#" class="logo">pragma<span class="logo-dot"></span></a>
+  <div class="nav-right">
+    <a href="#servicios">Servicios</a>
+    <a href="#por-que">Por qué</a>
+    <a href="#impacto">Resultados</a>
+    <button class="nav-btn" onclick="window.open('https://wa.me/5493413967999')">Contactar →</button>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-top">
+    <div class="hero-tag">Inteligencia Artificial · Equipos Legales</div>
+  </div>
+
+  <div class="hero-headline">
+    <h1 class="hero-h1">
+      ¿Tu equipo legal<br>
+      todavía no usa&nbsp;<span class="hl-elec">IA</span>?
+    </h1>
+  </div>
+
+  <div class="hero-bottom">
+    <div class="hero-bottom-cell">
+      <div class="hbc-label">El problema</div>
+      <div class="hbc-text">No es la intención — es no saber por dónde empezar.</div>
+    </div>
+    <div class="hero-bottom-cell">
+      <div class="hbc-label">Lo que hacemos</div>
+      <div class="hbc-text">Te mostramos exactamente cómo hacerlo, con casos reales y sin perder tiempo.</div>
+    </div>
+    <div class="hero-bottom-cell">
+      <button class="hbc-cta" onclick="window.open('https://wa.me/5493413967999')">
+        Quiero empezar
+        <span class="cta-arrow">
+          <svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 7h10M7 2l5 5-5 5"/>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICIOS ── -->
+<section id="servicios">
+  <div class="services-header">
+    <div>
+      <div class="sh-label" style="margin-bottom:12px;">Servicios</div>
+      <div class="sh-title">Todo lo que necesitás<br>para empezar</div>
+    </div>
+    <div class="sh-note">Cada intervención se diseña para tu equipo, tu operación y tus problemas concretos.</div>
+  </div>
+
+  <div class="service-row">
+    <div class="svc-num">01</div>
+    <div class="svc-title">Capacitaciones<br>a medida</div>
+    <div class="svc-desc">Entrenamos equipos jurídicos para dejar de hacer trabajo manual evitable y empezar a trabajar con IA, con criterio y sin riesgos. Analizamos tus procesos e identificamos oportunidades de mejora.</div>
+    <a class="svc-link" href="https://wa.me/5493413967999" target="_blank">
+      Consultar
+      <span class="svc-link-arrow">
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 7h10M7 2l5 5-5 5"/>
+        </svg>
+      </span>
+    </a>
+  </div>
+
+  <div class="service-row">
+    <div class="svc-num">02</div>
+    <div class="svc-title">Diagnóstico<br>de procesos</div>
+    <div class="svc-desc">Relevamos tus flujos de trabajo de punta a punta y te entregamos un mapa claro de dónde está el tiempo perdido y cómo recuperarlo. Contratalo solo o como continuación de una capacitación.</div>
+    <a class="svc-link" href="https://wa.me/5493413967999" target="_blank">
+      Consultar
+      <span class="svc-link-arrow">
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 7h10M7 2l5 5-5 5"/>
+        </svg>
+      </span>
+    </a>
+  </div>
+
+  <div class="service-row">
+    <div class="svc-num">03</div>
+    <div class="svc-title">Implementación<br>de soluciones</div>
+    <div class="svc-desc">Diseñamos, construimos e implementamos soluciones tecnológicas específicas para tu operación. Sin desarrollos desde cero, sin riesgos innecesarios. Resultados en semanas, no en meses.</div>
+    <a class="svc-link" href="https://wa.me/5493413967999" target="_blank">
+      Consultar
+      <span class="svc-link-arrow">
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 7h10M7 2l5 5-5 5"/>
+        </svg>
+      </span>
+    </a>
+  </div>
+</section>
+
+<!-- ── IMPACTO ── -->
+<section id="impacto">
+  <div class="impact-inner">
+    <div class="impact-cell">
+      <div class="impact-val">80<span>%</span></div>
+      <div class="impact-label">menos tiempo en gestión administrativa legal</div>
+      <div class="impact-source">Notificaciones · Derivación</div>
+    </div>
+    <div class="impact-cell">
+      <div class="impact-val">60<span>%</span></div>
+      <div class="impact-label">menos tiempo de investigación por expediente</div>
+      <div class="impact-source">Jurisprudencia · IA</div>
+    </div>
+    <div class="impact-cell">
+      <div class="impact-val">70<span>%</span></div>
+      <div class="impact-label">menos tiempo en documentación societaria</div>
+      <div class="impact-source">Actas · Trámites</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── POR QUÉ PRAGMA ── -->
+<section id="por-que">
+  <div class="why-header">
+    <div>
+      <div class="sh-label" style="margin-bottom:12px;">Por qué Pragma</div>
+      <div class="sh-title">Trabajamos distinto.</div>
+    </div>
+    <div class="sh-note">Nada de cursos pregrabados ni consultoras que desaparecen.</div>
+  </div>
+
+  <div class="why-row tier-1">
+    <div class="why-row-left">
+      <div class="why-num">01</div>
+      <div class="why-title">Aprendemos cómo trabajás, no cómo creemos que trabajás.</div>
+    </div>
+    <div class="why-row-right">
+      <div class="why-desc">Cuando capacitamos a tu equipo, los vemos operar en tiempo real. Eso nos da una lectura de tu operación que ningún cuestionario ni reunión inicial puede darte. Entendemos tu problema antes de proponer cualquier solución.</div>
+    </div>
+  </div>
+
+  <div class="why-row tier-2">
+    <div class="why-row-left">
+      <div class="why-num">02</div>
+      <div class="why-title">No inventamos la rueda.</div>
+    </div>
+    <div class="why-row-right">
+      <div class="why-desc">Las soluciones que implementamos se basan en herramientas que ya existen, ya fueron probadas y ya funcionan. Sin desarrollos desde cero, sin riesgos innecesarios. El objetivo es que veas resultados en semanas, no en meses.</div>
+    </div>
+  </div>
+
+  <div class="why-row tier-3">
+    <div class="why-row-left">
+      <div class="why-num">03</div>
+      <div class="why-title">Todo a medida. Nada genérico.</div>
+    </div>
+    <div class="why-row-right">
+      <div class="why-desc">Ni las capacitaciones, ni el diagnóstico, ni las soluciones. Cada intervención se diseña para tu equipo, tu operación y tus problemas concretos. No existe el copy-paste.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CITA ── -->
+<section id="quote">
+  <div class="quote-inner">
+    <div class="quote-eyebrow">Nuestra filosofía</div>
+    <blockquote class="quote-text">“La mejor forma de predecir<br>el futuro es <em>crearlo</em>.”</blockquote>
+    <div class="quote-author">— Alan Kay</div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section id="cta">
+  <div class="cta-left">
+    <div class="cta-eyebrow">El momento de empezar es ahora</div>
+    <h2 class="cta-h2">La IA ya transforma cómo trabajan los mejores equipos legales.</h2>
+  </div>
+  <div class="cta-right">
+    <button class="btn-cta" onclick="window.open('https://wa.me/5493413967999')">Hablemos hoy →</button>
+    <a href="https://wa.me/5493413967999" class="cta-wa" target="_blank">o escribinos por WhatsApp</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-logo">pragma<span class="logo-dot"></span></div>
+  <div class="footer-links">
+    <a href="#servicios">Servicios</a>
+    <a href="#por-que">Por qué Pragma</a>
+    <a href="#impacto">Resultados</a>
+  </div>
+  <div class="footer-copy">© 2026 Pragma. Todos los derechos reservados.</div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('bg', window.scrollY > 20);
+}, { passive: true });
+</script>
+</body>
+</html>
