@@ -452,6 +452,124 @@ footer {
 .footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color .15s; }
 .footer-links a:hover { color: var(--dark); }
 .footer-copy { font-size: 12px; color: var(--muted); }
+
+/* ── HAMBURGER (hidden on desktop) ── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column; justify-content: center; gap: 5px;
+  width: 44px; height: 44px; padding: 10px;
+  background: none; border: none; cursor: pointer;
+  margin-right: -10px;
+}
+.nav-hamburger span {
+  display: block; height: 2px; width: 100%;
+  background: var(--dark); border-radius: 2px;
+}
+
+/* ── MOBILE MENU OVERLAY ── */
+.mobile-menu {
+  position: fixed; inset: 0; z-index: 300;
+  background: var(--dark);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  opacity: 0; visibility: hidden;
+  transition: opacity .3s ease, visibility .3s ease;
+}
+.mobile-menu.open { opacity: 1; visibility: visible; }
+.mobile-menu-close {
+  position: absolute; top: 16px; right: 20px;
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  background: none; border: none; cursor: pointer; color: var(--cream);
+}
+.mobile-menu-close svg { width: 26px; height: 26px; }
+.mobile-menu-links {
+  display: flex; flex-direction: column; align-items: center; gap: 28px;
+}
+.mm-link {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700;
+  font-size: 34px; letter-spacing: -.02em;
+  color: var(--cream); text-decoration: none;
+}
+.mm-link-contact { color: var(--elec); }
+
+/* ── TABLET / MOBILE (<1024px) ── */
+@media (max-width: 1023px) {
+  .case-item:last-child:nth-child(odd) {
+    grid-template-columns: 1fr; gap: 24px;
+  }
+}
+
+/* ── MOBILE (<768px) ── */
+@media (max-width: 767px) {
+  nav { padding: 0 24px; }
+  .nav-right { display: none; }
+  .nav-hamburger { display: flex; }
+
+  /* HERO */
+  #hero { padding: 100px 24px 0; }
+  .hero-h1 { font-size: clamp(40px, 12vw, 56px); line-height: 1; }
+  .hero-bottom {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+  }
+  .hero-bottom-cell {
+    padding: 24px 0;
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+  }
+  .hero-bottom-cell:last-child { border-bottom: none; }
+  .hero-bottom-cell:first-child { padding-right: 0; }
+  .hero-bottom-cell:not(:first-child) { padding-left: 0; }
+  .hbc-cta {
+    width: 100%; justify-content: space-between;
+    min-height: 44px; padding: 12px 0;
+  }
+
+  /* SERVICES */
+  .services-header { padding: 48px 24px 32px; flex-direction: column; gap: 20px; }
+  .sh-note { text-align: left; max-width: 100%; }
+  .service-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 36px 24px;
+  }
+  .svc-num { font-size: 48px; }
+  .svc-link { min-height: 44px; }
+
+  /* IMPACT */
+  .impact-inner { grid-template-columns: 1fr; }
+  .impact-cell {
+    padding: 48px 24px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+  .impact-cell:last-child { border-bottom: none; }
+  .impact-val { font-size: clamp(72px, 22vw, 96px); }
+  .impact-label { max-width: 100%; }
+
+  /* WHY */
+  .why-header { padding: 48px 24px 32px; flex-direction: column; gap: 20px; }
+  .why-row { grid-template-columns: 1fr; }
+  .why-row-left {
+    padding: 40px 24px 0;
+    border-right: none;
+  }
+  .why-row-right { padding: 16px 24px 40px; }
+  .why-num { font-size: 64px; margin-bottom: 16px; }
+  .why-desc { max-width: 100%; }
+
+  /* QUOTE */
+  #quote { padding: 72px 24px; }
+
+  /* CTA */
+  #cta { padding: 64px 24px; flex-direction: column; align-items: flex-start; gap: 32px; }
+  .cta-right { width: 100%; }
+  .btn-cta { width: 100%; min-height: 44px; text-align: center; }
+
+  /* FOOTER */
+  footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
+}
 </style>
 </head>
 <body>
@@ -465,7 +583,23 @@ footer {
     <a href="#impacto">Resultados</a>
     <button class="nav-btn" onclick="window.open('https://wa.me/5493413967999')">Contactar →</button>
   </div>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- ── MOBILE MENU OVERLAY ── -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Cerrar menú">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+  </button>
+  <div class="mobile-menu-links">
+    <a href="#servicios" class="mm-link">Servicios</a>
+    <a href="#por-que" class="mm-link">Por qué</a>
+    <a href="#impacto" class="mm-link">Resultados</a>
+    <a href="https://wa.me/5493413967999" target="_blank" class="mm-link mm-link-contact">Contactar</a>
+  </div>
+</div>
 
 <!-- ── HERO ── -->
 <section id="hero">
@@ -654,6 +788,30 @@ const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('bg', window.scrollY > 20);
 }, { passive: true });
+
+/* ── MOBILE MENU ── */
+const hamburger = document.getElementById('navHamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+function openMenu() {
+  mobileMenu.classList.add('open');
+  mobileMenu.setAttribute('aria-hidden', 'false');
+  hamburger.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
+}
+function closeMenu() {
+  mobileMenu.classList.remove('open');
+  mobileMenu.setAttribute('aria-hidden', 'true');
+  hamburger.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+
+hamburger.addEventListener('click', openMenu);
+mobileMenuClose.addEventListener('click', closeMenu);
+document.querySelectorAll('.mm-link').forEach(link => {
+  link.addEventListener('click', closeMenu);
+});
 </script>
 </body>
 </html>
