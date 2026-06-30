@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ─── PRIMARY META ─── -->
+<title>Material complementario — Charla IA para Abogados | Pragma</title>
+<meta name="description" content="Dejanos tu mail y te enviamos la guía con los recursos, herramientas y prompts que vimos en la charla de IA para Abogados del Colegio de Abogados de Rosario.">
+<meta name="author" content="Pragma">
+<link rel="canonical" href="https://www.bepragma.com.ar/colegio-rosario">
+
+<!-- ─── FAVICON ─── -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<meta name="theme-color" content="#0a0c14">
+
+<!-- ─── OPEN GRAPH ─── -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Pragma">
+<meta property="og:title" content="Material complementario — Charla IA para Abogados">
+<meta property="og:description" content="Dejanos tu mail y te enviamos la guía con los recursos, herramientas y prompts que vimos en la charla.">
+<meta property="og:url" content="https://www.bepragma.com.ar/colegio-rosario">
+
+<!-- ─── ROBOTS ─── -->
+<meta name="robots" content="noindex, follow">
+
+<!-- ─── FONTS ─── -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: oklch(96%  0.012 80);
+  --white: #ffffff;
+  --dark:  oklch(12%  0.05  258);
+  --navy:  oklch(19%  0.09  258);
+  --elec:  oklch(59%  0.23  252);
+  --sand:  oklch(83%  0.05  78);
+  --muted: oklch(52%  0.025 258);
+  --rule:  oklch(84%  0.018 258);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--dark);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── NAV ── */
+nav {
+  padding: 0 48px; height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  border-bottom: 1px solid var(--rule);
+  background: var(--cream);
+}
+.logo {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 22px; letter-spacing: -.02em; color: var(--dark);
+  text-decoration: none; display: inline-flex; align-items: baseline;
+}
+.logo .logo-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--elec); display: inline-block; margin-left: 2px;
+}
+.nav-back {
+  font-size: 13.5px; color: var(--muted); text-decoration: none;
+  transition: color .15s; display: inline-flex; align-items: center; gap: 6px;
+}
+.nav-back:hover { color: var(--dark); }
+
+/* ── MAIN ── */
+main { flex: 1; }
+
+/* ── HERO ── */
+.hero {
+  padding: 72px 48px 56px;
+  border-bottom: 1px solid var(--rule);
+  max-width: 920px; margin: 0 auto; width: 100%;
+}
+.hero-tag {
+  font-size: 11px; font-weight: 700; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--elec); margin-bottom: 24px;
+}
+.hero-h1 {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: clamp(32px, 5vw, 56px);
+  letter-spacing: -.03em; line-height: 1.04;
+  color: var(--dark);
+}
+.hero-h1 .hl-elec {
+  display: inline-block;
+  background: var(--elec); color: #fff;
+  padding: 0 .14em; border-radius: 6px;
+}
+.hero-sub {
+  font-size: clamp(16px, 2vw, 19px); font-weight: 400; color: var(--muted);
+  line-height: 1.6; margin-top: 24px; max-width: 620px;
+}
+
+/* ── FORM ── */
+.form-section {
+  padding: 56px 48px;
+  border-bottom: 1px solid var(--rule);
+  max-width: 920px; margin: 0 auto; width: 100%;
+}
+.form-label {
+  font-size: 11px; font-weight: 700; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--elec); margin-bottom: 20px;
+}
+.form-card {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  padding: 12px;
+  overflow: hidden;
+}
+.form-card iframe {
+  width: 100%;
+  min-height: 420px;
+  border: none;
+  display: block;
+}
+.form-fallback {
+  padding: 28px;
+  font-size: 14.5px; color: var(--muted); line-height: 1.65;
+}
+.form-fallback a { color: var(--elec); font-weight: 600; text-decoration: none; }
+.form-fallback a:hover { text-decoration: underline; }
+
+/* ── OTROS CONTACTOS ── */
+.contact-section {
+  padding: 56px 48px;
+  max-width: 920px; margin: 0 auto; width: 100%;
+}
+.contact-label {
+  font-size: 11px; font-weight: 700; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--elec); margin-bottom: 28px;
+}
+.contact-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--rule);
+  border-left: 1px solid var(--rule);
+}
+.contact-item {
+  padding: 28px;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  display: flex; flex-direction: column; gap: 8px;
+  text-decoration: none;
+  transition: background .2s;
+}
+.contact-item:hover { background: var(--white); }
+.contact-item-label {
+  font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--muted);
+}
+.contact-item-val {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700;
+  font-size: 18px; letter-spacing: -.01em; color: var(--dark);
+  display: flex; align-items: center; gap: 8px; word-break: break-word;
+}
+.contact-item:hover .contact-item-val { color: var(--elec); }
+.contact-item-val svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+/* ── FOOTER ── */
+footer {
+  padding: 32px 48px;
+  display: flex; align-items: center; justify-content: space-between;
+  border-top: 1px solid var(--rule); flex-wrap: wrap; gap: 16px;
+}
+.footer-logo {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 17px; color: var(--dark);
+  display: inline-flex; align-items: baseline;
+  text-decoration: none;
+}
+.footer-logo .logo-dot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--elec); display: inline-block; margin-left: 2px;
+}
+.footer-copy { font-size: 12px; color: var(--muted); }
+
+/* ── MOBILE (<768px) ── */
+@media (max-width: 767px) {
+  nav { padding: 0 24px; }
+  .hero { padding: 48px 24px 40px; }
+  .form-section { padding: 40px 24px; }
+  .contact-section { padding: 40px 24px; }
+  .contact-grid { grid-template-columns: 1fr; }
+  footer { padding: 28px 24px; flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="/" class="logo">pragma<span class="logo-dot"></span></a>
+  <a href="https://www.bepragma.com.ar/" class="nav-back">
+    <svg viewBox="0 0 14 14" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7H2M7 2L2 7l5 5"/></svg>
+    Ir al sitio
+  </a>
+</nav>
+
+<main>
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-tag">Colegio de Abogados de Rosario</div>
+    <h1 class="hero-h1">
+      Material complementario — Charla <span class="hl-elec">IA para Abogados</span>
+    </h1>
+    <p class="hero-sub">
+      Dejanos tu mail y te enviamos la guía con los recursos, herramientas y prompts que vimos en la charla.
+    </p>
+  </section>
+
+  <!-- ── FORMULARIO ── -->
+  <section class="form-section">
+    <div class="form-label">Recibí la guía</div>
+    <div class="form-card">
+      <!-- Reemplazá <TALLY_EMBED_URL> por la URL del embed de Tally -->
+      <iframe
+        src="<TALLY_EMBED_URL>"
+        title="Formulario para recibir la guía"
+        loading="lazy">
+      </iframe>
+      <noscript>
+        <div class="form-fallback">
+          Necesitás habilitar JavaScript para ver el formulario.
+          También podés escribirnos a <a href="mailto:mpansa@bepragma.com.ar">mpansa@bepragma.com.ar</a>.
+        </div>
+      </noscript>
+    </div>
+  </section>
+
+  <!-- ── OTROS CONTACTOS ── -->
+  <section class="contact-section">
+    <div class="contact-label">Otros contactos</div>
+    <div class="contact-grid">
+      <a class="contact-item" href="mailto:mpansa@bepragma.com.ar">
+        <span class="contact-item-label">Mail</span>
+        <span class="contact-item-val">mpansa@bepragma.com.ar</span>
+      </a>
+      <a class="contact-item" href="https://wa.me/5493413967999" target="_blank" rel="noopener">
+        <span class="contact-item-label">WhatsApp</span>
+        <span class="contact-item-val">
+          +54 9 341 396 7999
+          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11L11 3M5 3h6v6"/></svg>
+        </span>
+      </a>
+      <a class="contact-item" href="https://www.linkedin.com/company/106669226/" target="_blank" rel="noopener">
+        <span class="contact-item-label">LinkedIn</span>
+        <span class="contact-item-val">
+          Pragma
+          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11L11 3M5 3h6v6"/></svg>
+        </span>
+      </a>
+      <a class="contact-item" href="https://www.bepragma.com.ar/" target="_blank" rel="noopener">
+        <span class="contact-item-label">Web</span>
+        <span class="contact-item-val">
+          bepragma.com.ar
+          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11L11 3M5 3h6v6"/></svg>
+        </span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <a href="/" class="footer-logo">pragma<span class="logo-dot"></span></a>
+  <div class="footer-copy">© 2026 Pragma. Todos los derechos reservados.</div>
+</footer>
+
+</body>
+</html>
