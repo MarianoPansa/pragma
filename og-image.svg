@@ -25,15 +25,8 @@
   </text>
 
   
-  <text x="72" y="380" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, system-ui, sans-serif" font-size="86" font-weight="800" letter-spacing="-3" fill="#ffffff">¿Tu equipo legal</text>
-  <text x="72" y="465" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, system-ui, sans-serif" font-size="68" font-weight="800" letter-spacing="-2" fill="#ffffff">todavía no usa</text>
-
-  
-  <g transform="translate(660, 410)">
-    <rect x="0" y="0" width="160" height="92" rx="10" fill="#3b7bf5"></rect>
-    <text x="80" y="68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, system-ui, sans-serif" font-size="68" font-weight="800" letter-spacing="-2" fill="#ffffff">IA</text>
-  </g>
-  <text x="836" y="475" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, system-ui, sans-serif" font-size="86" font-weight="800" letter-spacing="-3" fill="#ffffff">?</text>
+  <text x="72" y="390" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, system-ui, sans-serif" font-size="92" font-weight="800" letter-spacing="-3" fill="#ffffff">De <tspan fill="#3b7bf5">abogados</tspan>,</text>
+  <text x="72" y="485" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, system-ui, sans-serif" font-size="92" font-weight="800" letter-spacing="-3" fill="#ffffff">para <tspan fill="#3b7bf5">abogados</tspan>.</text>
 
   
   <line x1="72" y1="555" x2="1128" y2="555" stroke="rgba(255,255,255,0.12)" stroke-width="1"></line>
