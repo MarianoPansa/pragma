@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* Brand palette preserved as CSS variables (oklch, not hex approximations) */
+:root {
+  --cream: oklch(96% 0.012 80);
+  --white: #ffffff;
+  --dark: oklch(12% 0.05 258);
+  --navy: oklch(19% 0.09 258);
+  --elec: oklch(59% 0.23 252);
+  --sand: oklch(83% 0.05 78);
+  --muted: oklch(52% 0.025 258);
+  --rule: oklch(84% 0.018 258);
+
+  /* additional design tokens used inline in the original CSS */
+  --svc-num: oklch(88% 0.018 258);
+  --why-num: oklch(90% 0.016 258);
+  --tier-2-bg: oklch(38% 0.085 258);
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-white: var(--white);
+  --color-dark: var(--dark);
+  --color-navy: var(--navy);
+  --color-elec: var(--elec);
+  --color-sand: var(--sand);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-svc-num: var(--svc-num);
+  --color-why-num: var(--why-num);
+  --color-tier2: var(--tier-2-bg);
+
+  --font-sans: var(--font-dm-sans);
+  --font-display: var(--font-bricolage);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--cream);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
