@@ -1,37 +1,44 @@
 @import "tailwindcss";
 
-/* Brand palette preserved as CSS variables (oklch, not hex approximations) */
+/*
+  Brand palette + typography preserved as CSS variables (not hex approximations).
+  Font families resolve to the next/font variables declared in layout.tsx.
+*/
 :root {
-  --cream: oklch(96% 0.012 80);
-  --white: #ffffff;
-  --dark: oklch(12% 0.05 258);
-  --navy: oklch(19% 0.09 258);
-  --elec: oklch(59% 0.23 252);
-  --sand: oklch(83% 0.05 78);
-  --muted: oklch(52% 0.025 258);
-  --rule: oklch(84% 0.018 258);
+  --font-heading: var(--font-bricolage), sans-serif;
+  --font-body: var(--font-dm-sans), sans-serif;
+  --font-mono: var(--font-jetbrains), monospace;
 
-  /* additional design tokens used inline in the original CSS */
-  --svc-num: oklch(88% 0.018 258);
-  --why-num: oklch(90% 0.016 258);
-  --tier-2-bg: oklch(38% 0.085 258);
+  /* aliases used throughout the ported design CSS */
+  --fh: var(--font-heading);
+  --fb: var(--font-body);
+  --fm: var(--font-mono);
+
+  /* shared brand tokens */
+  --cream: #f2ede3;
+  --white: #ffffff;
+  --dark: #0a0c14;
+  --sand: #7a7062;
 }
 
+/* Expose a few tokens to Tailwind utilities (bg-cream, text-dark, ...) */
 @theme inline {
   --color-cream: var(--cream);
   --color-white: var(--white);
   --color-dark: var(--dark);
-  --color-navy: var(--navy);
-  --color-elec: var(--elec);
   --color-sand: var(--sand);
-  --color-muted: var(--muted);
-  --color-rule: var(--rule);
-  --color-svc-num: var(--svc-num);
-  --color-why-num: var(--why-num);
-  --color-tier2: var(--tier-2-bg);
 
-  --font-sans: var(--font-dm-sans);
-  --font-display: var(--font-bricolage);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
+  --font-mono: var(--font-mono);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -40,6 +47,9 @@ html {
 }
 
 body {
+  font-family: var(--fb);
+  color: var(--dark);
+  background: var(--cream);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }

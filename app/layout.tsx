@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next"
-import { Bricolage_Grotesque, DM_Sans } from "next/font/google"
+import { Bricolage_Grotesque, DM_Sans, JetBrains_Mono } from "next/font/google"
 import "./globals.css"
+import "./landing.css"
+import "./vertical.css"
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -16,23 +18,25 @@ const dmSans = DM_Sans({
   display: "swap",
 })
 
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-jetbrains",
+  display: "swap",
+})
+
 const SITE_URL = "https://www.bepragma.com.ar"
-const TITLE = "Pragma — Inteligencia Artificial para equipos legales"
+const TITLE = "pragma. — Inteligencia artificial aplicada"
 const DESCRIPTION =
-  "Capacitaciones, diagnóstico e implementación de soluciones de IA para estudios jurídicos, equipos legales in-house y empresas. Resultados concretos en semanas, no en meses."
+  "Consultora de inteligencia artificial aplicada. Trabajamos sobre tus documentos, flujos y problemas reales, con resultados que se ven en el día a día."
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: TITLE,
+  title: {
+    default: TITLE,
+    template: "%s — pragma.",
+  },
   description: DESCRIPTION,
-  keywords: [
-    "IA legal",
-    "inteligencia artificial abogados",
-    "legaltech",
-    "automatización legal",
-    "capacitación IA estudios jurídicos",
-    "Pragma",
-  ],
   authors: [{ name: "Pragma" }],
   alternates: { canonical: "/" },
   icons: {
@@ -45,23 +49,14 @@ export const metadata: Metadata = {
     locale: "es_AR",
     siteName: "Pragma",
     title: TITLE,
-    description:
-      "De abogados, para abogados. IA aplicada a tu práctica legal: soluciones concretas, personalizadas y con resultados que se ven en el día a día de tu estudio o tu área legal.",
+    description: DESCRIPTION,
     url: "/",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: TITLE,
-      },
-    ],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: TITLE }],
   },
   twitter: {
     card: "summary_large_image",
     title: TITLE,
-    description:
-      "De abogados, para abogados. IA aplicada a tu práctica legal, con soluciones concretas y resultados que se ven en el día a día.",
+    description: DESCRIPTION,
     images: [{ url: "/og-image.png", alt: TITLE }],
   },
 }
@@ -76,8 +71,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es" className={`${bricolage.variable} ${dmSans.variable} bg-cream`}>
-      <body className="font-sans bg-cream text-dark">{children}</body>
+    <html
+      lang="es"
+      className={`${bricolage.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
+    >
+      <body>{children}</body>
     </html>
   )
 }
