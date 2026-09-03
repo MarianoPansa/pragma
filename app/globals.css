@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/*
+  Brand palette + typography preserved as CSS variables (not hex approximations).
+  Font families resolve to the next/font variables declared in layout.tsx.
+*/
+:root {
+  --font-heading: var(--font-bricolage), sans-serif;
+  --font-body: var(--font-dm-sans), sans-serif;
+  --font-mono: var(--font-jetbrains), monospace;
+
+  /* aliases used throughout the ported design CSS */
+  --fh: var(--font-heading);
+  --fb: var(--font-body);
+  --fm: var(--font-mono);
+
+  /* shared brand tokens */
+  --cream: #f2ede3;
+  --white: #ffffff;
+  --dark: #0a0c14;
+  --sand: #7a7062;
+}
+
+/* Expose a few tokens to Tailwind utilities (bg-cream, text-dark, ...) */
+@theme inline {
+  --color-cream: var(--cream);
+  --color-white: var(--white);
+  --color-dark: var(--dark);
+  --color-sand: var(--sand);
+
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
+  --font-mono: var(--font-mono);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--cream);
+}
+
+body {
+  font-family: var(--fb);
+  color: var(--dark);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
