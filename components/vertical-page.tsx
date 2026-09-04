@@ -25,7 +25,7 @@ const data = {
     contactNote: 'Media hora, sin compromiso. Te mostramos qué puede hacer la IA por tu estudio o tu área, con ejemplos de tu práctica. Si con lo que ya tenés alcanza, te lo decimos.',
   },
   empresas: {
-    label: 'pragma empresas', accent: 'Redefinamos la<br>forma de hacer <em>negocios</em><span class="hl-elec">.</span>', tag: 'Inteligencia Artificial · Empresas', switch: 'legal', switchDesc: 'IA para estudios jurídicos y áreas legales', other: '/legal', cross: 'pragma legal', crossDesc: 'IA para estudios jurídicos y áreas legales', kind: 'empresas' as Kind,
+    label: 'pragma empresas', accent: 'Redefinamos la<br>forma de hacer <span class="hl-elec">negocios</span>.', tag: 'Inteligencia Artificial · Empresas', switch: 'legal', switchDesc: 'IA para estudios jurídicos y áreas legales', other: '/legal', cross: 'pragma legal', crossDesc: 'IA para estudios jurídicos y áreas legales', kind: 'empresas' as Kind,
     lede: <>Inteligencia artificial aplicada a las operaciones de tu empresa. Ni teoría ni herramientas genéricas: <strong>soluciones concretas, personalizadas y enfocadas en resultados</strong> que se ven en el día a día de tu operación.</>,
     audience: null,
     values: [['Desde adentro','Nos metemos en tu operación. Entendemos cómo trabaja tu equipo y hablamos el idioma del negocio.'],['A tu medida','Nada de plantillas. Trabajamos sobre tus procesos, tus datos y tus problemas reales.'],['Con resultados','Concreto y medible. Menos tiempo operativo, más foco en lo que mueve el negocio.']],
