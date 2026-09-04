@@ -758,6 +758,9 @@
   .font-display {
     font-family: var(--font-heading);
   }
+  .text-wrap {
+    text-wrap: wrap;
+  }
   .lowercase {
     text-transform: lowercase;
   }
@@ -1561,7 +1564,7 @@ body {
     align-items: center;
     gap: 20px;
   }
-  & .nav-btn {
+  & .nav-right .nav-btn {
     font-size: 13px;
     font-weight: 600;
     padding: 8px 20px;
