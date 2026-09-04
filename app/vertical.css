@@ -87,7 +87,7 @@
     align-items: center;
     gap: 20px;
   }
-  & .nav-btn {
+  & .nav-right .nav-btn {
     font-size: 13px;
     font-weight: 600;
     padding: 8px 20px;
@@ -424,9 +424,9 @@
   }
   & .stages {
     padding: 40px 48px 72px;
-    display: grid;
-    grid-template-columns: 96px 1fr;
-    column-gap: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
   & .stage-rail {
     position: relative;
