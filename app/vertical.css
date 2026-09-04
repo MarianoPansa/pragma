@@ -424,9 +424,9 @@
   }
   & .stages {
     padding: 40px 48px 72px;
-    display: grid;
-    grid-template-columns: 96px 1fr;
-    column-gap: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
   & .stage-rail {
     position: relative;
