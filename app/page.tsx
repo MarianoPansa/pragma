@@ -43,13 +43,12 @@ export default function LandingPage() {
           Inteligencia artificial aplicada
         </div>
         <h1 className="reveal" data-d="2">
-          Elegí por dónde
+          Redefinamos la forma
           <br />
-          querés <em>empezar</em>
-          <span className="dot-h">.</span>
+          de hacer <em>negocios<span className="dot-h">.</span></em>
         </h1>
         <p className="hero-sub reveal" data-d="3">
-          Pragma es IA aplicada a problemas reales. <strong>Trabajamos sobre tus documentos, flujos y procesos</strong>, con resultados que se ven en el día a día. Dos caminos, una misma forma de trabajar.
+          Pragma es una consultora de <strong>inteligencia artificial aplicada</strong>. No damos cursos genéricos ni vendemos herramientas de manual: trabajamos sobre tus documentos, tus flujos y tus problemas reales, con resultados que se ven en el día a día.
         </p>
       </header>
 
@@ -57,20 +56,21 @@ export default function LandingPage() {
       <div className="paths">
         <a href="/legal" className="path legal reveal" data-d="4">
           <div className="p-top">
-            <span className="p-tag">Estudios · Escribanías · Áreas legales</span>
+            <span className="p-tag">Vertical · 01</span>
             <span className="p-mark" />
           </div>
           <div className="p-h">
-            <span className="brand">pragma </span>
+            <span className="brand">pragma</span>
+            <br />
             <span className="kind">legal</span>
           </div>
           <p className="p-desc">
-            IA aplicada a tu práctica: escritos que se redactan solos, jurisprudencia en minutos y expedientes que dejan de acumularse. De abogados, para abogados.
+            IA para estudios jurídicos, notarías y áreas legales in-house. De abogados, para abogados.
           </p>
           <div className="p-cta">
             <span>
-              <span className="k">Explorar</span>
-              <span className="v">Para el mundo legal</span>
+              <span className="k">Ir a</span>
+              <span className="v">bepragma.com.ar/legal</span>
             </span>
             <span className="p-arrow">
               <Arrow />
@@ -80,20 +80,21 @@ export default function LandingPage() {
 
         <a href="/empresas" className="path empresas reveal" data-d="5">
           <div className="p-top">
-            <span className="p-tag">Pymes · Equipos de operaciones</span>
+            <span className="p-tag">Vertical · 02</span>
             <span className="p-mark" />
           </div>
           <div className="p-h">
-            <span className="brand">pragma </span>
+            <span className="brand">pragma</span>
+            <br />
             <span className="kind">empresas</span>
           </div>
           <p className="p-desc">
-            IA aplicada a las operaciones de tu empresa: procesos más claros, menos tareas repetitivas y más tiempo para hacer crecer el negocio.
+            IA para pymes y equipos de operaciones, comercial y back-office. Diagnóstico, implementación y adopción.
           </p>
           <div className="p-cta">
             <span>
-              <span className="k">Explorar</span>
-              <span className="v">Para tu empresa</span>
+              <span className="k">Ir a</span>
+              <span className="v">bepragma.com.ar/empresas</span>
             </span>
             <span className="p-arrow">
               <Arrow />
@@ -107,6 +108,8 @@ export default function LandingPage() {
         <span>© 2026 pragma.</span>
         <div className="foot-contact">
           <a href="mailto:mpansa@bepragma.com.ar">mpansa@bepragma.com.ar</a>
+          <span className="sep">·</span>
+          <a href="mailto:enhidalgo@bepragma.com.ar">enhidalgo@bepragma.com.ar</a>
           <span className="sep">·</span>
           <a href={WA}>+54 9 3415 111 363</a>
         </div>
