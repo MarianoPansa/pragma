@@ -1,25 +1,42 @@
 {
   "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-8d0e84f761a324ae.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-3981a3d1f3561bd8.js",
+      "static/chunks/main-app-27fc46e3e6019575.js",
+      "static/chunks/app/_not-found/page-7065e012477547f3.js"
+    ],
     "/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
+      "static/chunks/webpack-8d0e84f761a324ae.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-3981a3d1f3561bd8.js",
+      "static/chunks/main-app-27fc46e3e6019575.js",
+      "static/css/4ab14b3dd12690b5.css",
+      "static/chunks/app/layout-b2dff6f8fbb106ce.js"
     ],
     "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
-    "/empresas/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/empresas/page.js"
+      "static/chunks/webpack-8d0e84f761a324ae.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-3981a3d1f3561bd8.js",
+      "static/chunks/main-app-27fc46e3e6019575.js",
+      "static/chunks/app/page-9308b2aade2e5363.js"
     ],
     "/legal/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/legal/page.js"
+      "static/chunks/webpack-8d0e84f761a324ae.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-3981a3d1f3561bd8.js",
+      "static/chunks/main-app-27fc46e3e6019575.js",
+      "static/chunks/987-5e3463dc2926f414.js",
+      "static/chunks/app/legal/page-f09a141f16960b50.js"
+    ],
+    "/empresas/page": [
+      "static/chunks/webpack-8d0e84f761a324ae.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-3981a3d1f3561bd8.js",
+      "static/chunks/main-app-27fc46e3e6019575.js",
+      "static/chunks/987-5e3463dc2926f414.js",
+      "static/chunks/app/empresas/page-85f64550d9dcab35.js"
     ]
   }
 }
